@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoFlow Systems - Business Automation Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0F172A',
+                        accent: '#06B6D4',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        .animate-delay-200 {
+            animation-delay: 0.2s;
+            opacity: 0;
+        }
+        .animate-delay-400 {
+            animation-delay: 0.4s;
+            opacity: 0;
+        }
+        /* Pricing card hover effect */
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(6, 182, 212, 0.2);
+        }
+        /* Popular badge */
+        .popular-badge {
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            background: #06B6D4;
+            color: white;
+            font-weight: bold;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-800 overflow-x-hidden">
+
+    <!-- Header -->
+    <header class="bg-white fixed w-full top-0 z-50 shadow-sm">
+        <nav class="max-w-7xl mx-auto px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-primary">AutoFlow Systems</div>
+            
+            <!-- Desktop Navigation -->
+            <ul class="hidden md:flex gap-8 items-center">
+                <li><a href="#solutions" class="text-slate-700 font-medium hover:text-accent transition-colors">Solutions</a></li>
+                <li><a href="#pricing" class="text-slate-700 font-medium hover:text-accent transition-colors">Tap & Serve Pricing</a></li>
+                <li><a href="#how-it-works" class="text-slate-700 font-medium hover:text-accent transition-colors">Worklow Automation</a></li>
+                <li><a href="#industries" class="text-slate-700 font-medium hover:text-accent transition-colors">Industries</a></li>
+                <li><a href="#contact" class="text-slate-700 font-medium hover:text-accent transition-colors">Contact</a></li>
+            </ul>
+            
+            <a href="#contact" class="hidden md:block bg-accent text-white px-6 py-3 rounded-lg font-semibold hover:-translate-y-0.5 hover:shadow-lg hover:shadow-accent/30 transition-all">
+                Get Started
+            </a>
+            
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-primary text-2xl" id="mobile-menu-btn">
+                <i data-lucide="menu"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-primary to-slate-800 text-white pt-32 pb-24 px-6 lg:px-8 mt-20">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight animate-fade-in-up">
+                Automate Your Business. Scale Without Limits.
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-300 mb-10 animate-fade-in-up animate-delay-200">
+                Custom automation systems that solve real problems for restaurants, hospitality, retail, distribution  and growing businesses worldwide.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animate-delay-400">
+                <a href="#solutions" class="bg-accent text-white px-8 py-4 rounded-lg font-semibold text-lg hover:-translate-y-1 hover:shadow-xl hover:shadow-accent/40 transition-all inline-flex items-center justify-center gap-2">
+                    View Solutions
+                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+                <a href="#contact" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-primary transition-all inline-flex items-center justify-center gap-2">
+                    Book Free Consultation
+                    <i data-lucide="calendar" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="bg-primary text-white py-24 px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl md:text-5xl font-bold mb-12">Running a Business Shouldn't Feel This Hard</h2>
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-xl hover:-translate-y-2 transition-transform">
+                    <div class="mb-4 flex justify-center">
+                        <i data-lucide="alert-circle" class="w-12 h-12 text-accent"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-accent">Lost Orders & Chaos</h3>
+                    <p class="text-slate-300">Orders falling through the cracks, confused staff, and frustrated customers waiting too long.</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-xl hover:-translate-y-2 transition-transform">
+                    <div class="mb-4 flex justify-center">
+                        <i data-lucide="unplug" class="w-12 h-12 text-accent"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-accent">Disconnected Tools</h3>
+                    <p class="text-slate-300">Paying for multiple systems that don't talk to each other, creating more work instead of less.</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-xl hover:-translate-y-2 transition-transform">
+                    <div class="mb-4 flex justify-center">
+                        <i data-lucide="clock" class="w-12 h-12 text-accent"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-accent">Manual Everything</h3>
+                    <p class="text-slate-300">Spending hours on repetitive tasks that should take minutes, stealing time from growth.</p>
+                </div>
+            </div>
+            <p class="text-2xl font-semibold text-accent mt-12">There's a better way →</p>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section id="solutions" class="bg-slate-50 py-24 px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold text-primary mb-4">Solutions Built for Real Businesses</h2>
+                <p class="text-xl text-slate-600">Powerful automation that actually works for you</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Restaurant Command Center -->
+                <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-2 hover:border-accent border-2 border-transparent transition-all">
+                    <div class="mb-6">
+                        <i data-lucide="store" class="w-12 h-12 text-accent"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-primary mb-4">Restaurant Command Center</h3>
+                    <ul class="space-y-3 mb-6 text-slate-600">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"></i>
+                            <span>Integrated POS & ordering system</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"></i>
+                            <span>Real-time kitchen display</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"></i>
+                            <span>Smart menu management</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"></i>
+                            <span>Automated inventory tracking</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="text-accent font-semibold hover:text-primary transition-colors inline-flex items-center gap-2">
+                        Learn More
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Message Platform Ordering -->
+                <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-2 hover:border-accent border-2 border-transparent transition-all">
+                    <div class="mb-6">
+                        <i data-lucide="message-circle" class="w-12 h-12 text-accent"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-primary mb-4">Message Platform Ordering</h3>
+                    <ul class="space-y-3 mb-6 text-slate-600">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"></i>
+                            <span>WhatsApp & SMS ordering automation</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"></i>
+                            <span>Order status updates</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"></i>
+                            <span>Customer communication workflows</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"></i>
+                            <span>Payment integration</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="text-accent font-semibold hover:text-primary transition-colors inline-flex items-center gap-2">
+                        Learn More
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Content Calendar Systems -->
+                <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-2 hover:border-accent border-2 border-transparent transition-all">
+                    <div class="mb-6">
+                        <i data-lucide="calendar-days" class="w-12 h-12 text-accent"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-primary mb-4">Content Calendar Systems</h3>
+                    <ul class="space-y-3 mb-6 text-slate-600">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"></i>
+                            <span>Multi-client management portal</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"></i>
+                            <span>Approval workflows</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"></i>
+                            <span>Platform emulators</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"></i>
+                            <span>Automated scheduling</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="text-accent font-semibold hover:text-primary transition-colors inline-flex items-center gap-2">
+                        Learn More
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Smart Kitchen Display -->
+                <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-2 hover:border-accent border-2 border-transparent transition-all">
+                    <div class="mb-6">
+                        <i data-lucide="monitor" class="w-12 h-12 text-accent"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-primary mb-4">Smart Kitchen Display</h3>
+                    <ul class="space-y-3 mb-6 text-slate-600">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"></i>
+                            <span>Real-time order management</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"></i>
+                            <span>Bottleneck detection</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"></i>
+                            <span>Intelligent queue prioritization</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"></i>
+                            <span>Performance analytics</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="text-accent font-semibold hover:text-primary transition-colors inline-flex items-center gap-2">
+                        Learn More
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Menu Management System -->
+                <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-2 hover:border-accent border-2 border-transparent transition-all">
+                    <div class="mb-6">
+                        <i data-lucide="book-open" class="w-12 h-12 text-accent"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-primary mb-4">Menu Management System</h3>
+                    <ul class="space-y-3 mb-6 text-slate-600">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"></i>
+                            <span>Real-time availability updates</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"></i>
+                            <span>Prevent unavailable orders</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"></i>
+                            <span>Multi-channel sync</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"></i>
+                            <span>Automatic notifications</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="text-accent font-semibold hover:text-primary transition-colors inline-flex items-center gap-2">
+                        Learn More
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Custom Automation -->
+                <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-2 hover:border-accent border-2 border-transparent transition-all">
+                    <div class="mb-6">
+                        <i data-lucide="settings" class="w-12 h-12 text-accent"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-primary mb-4">Custom Automation</h3>
+                    <ul class="space-y-3 mb-6 text-slate-600">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"></i>
+                            <span>Your unique business problem</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"></i>
+                            <span>Tailored solution design</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"></i>
+                            <span>Scalable architecture</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"></i>
+                            <span>Ongoing optimization</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="text-accent font-semibold hover:text-primary transition-colors inline-flex items-center gap-2">
+                        Learn More
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TAP & SERVE PRICING SECTION -->
+    <section id="pricing" class="bg-white py-24 px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold text-primary mb-4">Tap & Serve Pricing</h2>
+                <p class="text-xl text-slate-600">Simple, transparent plans for restaurants and cafes</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Starter Plan -->
+                <div class="pricing-card bg-slate-50 rounded-2xl p-8 border-2 border-slate-200 relative transition-all duration-300">
+                    <h3 class="text-2xl font-bold text-primary mb-2">Starter</h3>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-primary">BB$99</span>
+                        <span class="text-slate-600">/month</span>
+                    </div>
+                    <p class="text-slate-600 mb-4"><strong>Includes:</strong> 500 orders/month</p>
+                    <p class="text-sm text-slate-500 mb-6">Overage: BB$0.25 per order above 500</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"></i>
+                            <span>Standard digital menu</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"></i>
+                            <span>Basic menu management</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"></i>
+                            <span>Kitchen Display System (KDS)</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"></i>
+                            <span>WhatsApp notifications</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="block w-full bg-primary text-white text-center py-3 rounded-lg font-semibold hover:bg-slate-800 transition-colors">
+                        Get Started
+                    </a>
+                </div>
+
+                <!-- Professional Plan -->
+                <div class="pricing-card bg-slate-50 rounded-2xl p-8 border-2 border-accent relative transition-all duration-300">
+                    <div class="popular-badge">MOST POPULAR</div>
+                    <h3 class="text-2xl font-bold text-primary mb-2">Professional</h3>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-primary">BB$299</span>
+                        <span class="text-slate-600">/month</span>
+                    </div>
+                    <p class="text-slate-600 mb-4"><strong>Includes:</strong> 1,500 orders/month</p>
+                    <p class="text-sm text-slate-500 mb-6">Overage: BB$0.25 per order above 1,500</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"></i>
+                            <span>Realtime order tracking</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"></i>
+                            <span>Premium digital menu</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"></i>
+                            <span>Kitchen Display System (KDS)</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"></i>
+                            <span>Advanced menu management</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="block w-full bg-accent text-white text-center py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-colors">
+                        Get Started
+                    </a>
+                </div>
+
+                <!-- Premium Plan -->
+                <div class="pricing-card bg-slate-50 rounded-2xl p-8 border-2 border-slate-200 relative transition-all duration-300">
+                    <h3 class="text-2xl font-bold text-primary mb-2">Premium</h3>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-primary">BB$399</span>
+                        <span class="text-slate-600">/month</span>
+                    </div>
+                    <p class="text-slate-600 mb-4"><strong>Includes:</strong> 2,000 orders/month</p>
+                    <p class="text-sm text-slate-500 mb-6">Overage: BB$0.25 per order above 2,000</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"></i>
+                            <span>Realtime order tracking</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"></i>
+                            <span>Premium digital menu</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"></i>
+                            <span>Kitchen Display System (KDS)</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"></i>
+                            <span>Advanced menu management</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="block w-full bg-primary text-white text-center py-3 rounded-lg font-semibold hover:bg-slate-800 transition-colors">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12 text-slate-600">
+                <p>All plans include secure hosting, mobile-friendly menus, and email support.</p>
+                <p class="mt-2">Overage fees billed monthly. No long-term contracts.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="bg-white py-24 px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold text-primary mb-4">How It Works</h2>
+                <p class="text-xl text-slate-600">From consultation to launch in three simple steps</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-gradient-to-br from-accent to-cyan-600 text-white rounded-full flex items-center justify-center text-4xl font-bold mx-auto mb-6 shadow-lg shadow-accent/30">
+                        1
+                    </div>
+                    <h3 class="text-2xl font-bold text-primary mb-4">Discovery Call</h3>
+                    <p class="text-slate-600 text-lg">We dive deep into your business challenges and identify automation opportunities that deliver real value.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-gradient-to-br from-accent to-cyan-600 text-white rounded-full flex items-center justify-center text-4xl font-bold mx-auto mb-6 shadow-lg shadow-accent/30">
+                        2
+                    </div>
+                    <h3 class="text-2xl font-bold text-primary mb-4">Custom Design</h3>
+                    <p class="text-slate-600 text-lg">Our team builds your solution using enterprise-grade tools, tailored precisely to your workflow.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-gradient-to-br from-accent to-cyan-600 text-white rounded-full flex items-center justify-center text-4xl font-bold mx-auto mb-6 shadow-lg shadow-accent/30">
+                        3
+                    </div>
+                    <h3 class="text-2xl font-bold text-primary mb-4">Launch & Support</h3>
+                    <p class="text-slate-600 text-lg">Go live with full training and ongoing optimization to ensure your system grows with your business.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries -->
+    <section id="industries" class="bg-slate-50 py-24 px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold text-primary mb-4">Built for Businesses Like Yours</h2>
+                <p class="text-xl text-slate-600">Specialized solutions for different industries</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-8 rounded-xl text-center hover:scale-105 hover:border-accent border-2 border-transparent hover:shadow-lg transition-all">
+                    <div class="mb-4 flex justify-center">
+                        <i data-lucide="utensils" class="w-16 h-16 text-accent"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-2">Restaurants & Cafes</h3>
+                    <p class="text-slate-600">End-to-end ordering and kitchen management</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl text-center hover:scale-105 hover:border-accent border-2 border-transparent hover:shadow-lg transition-all">
+                    <div class="mb-4 flex justify-center">
+                        <i data-lucide="smartphone" class="w-16 h-16 text-accent"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-2">Marketing Agencies</h3>
+                    <p class="text-slate-600">Content Management Systems</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl text-center hover:scale-105 hover:border-accent border-2 border-transparent hover:shadow-lg transition-all">
+                    <div class="mb-4 flex justify-center">
+                        <i data-lucide="shopping-bag" class="w-16 h-16 text-accent"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-2">Retail & E-commerce</h3>
+                    <p class="text-slate-600">Inventory and order automation</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl text-center hover:scale-105 hover:border-accent border-2 border-transparent hover:shadow-lg transition-all">
+                    <div class="mb-4 flex justify-center">
+                        <i data-lucide="wrench" class="w-16 h-16 text-accent"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-2">Service Businesses</h3>
+                    <p class="text-slate-600">Scheduling and customer workflows</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section id="contact" class="bg-gradient-to-br from-accent to-cyan-600 py-24 px-6 lg:px-8 text-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4">Ready to Automate Your Business?</h2>
+            <p class="text-xl mb-12 text-white/90">Free 30-minute consultation. No commitment required.</p>
+            
+            <div class="bg-white p-8 md:p-12 rounded-2xl shadow-2xl">
+                <!-- Replace the existing form section with this -->
+<form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+    <!-- Hidden field for your access key -->
+    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+    
+    <!-- Optional: Custom subject line -->
+    <input type="hidden" name="subject" value="New Contact Form Submission from AutoFlow Systems">
+    
+    <!-- Optional: Redirect after submission -->
+    <input type="hidden" name="redirect" value="https://yourwebsite.com/thank-you.html">
+    
+    <div class="text-left">
+        <label for="name" class="block text-primary font-semibold mb-2">Full Name</label>
+        <input type="text" id="name" name="name" required class="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:border-accent focus:outline-none text-slate-800 transition-colors">
+    </div>
+    
+    <div class="text-left">
+        <label for="email" class="block text-primary font-semibold mb-2">Email Address</label>
+        <input type="email" id="email" name="email" required class="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:border-accent focus:outline-none text-slate-800 transition-colors">
+    </div>
+    
+    <div class="text-left">
+        <label for="business" class="block text-primary font-semibold mb-2">Business Type</label>
+        <select id="business" name="business" required class="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:border-accent focus:outline-none text-slate-800 transition-colors">
+            <option value="">Select your industry</option>
+            <option value="restaurant">Restaurant / Cafe</option>
+            <option value="agency">Marketing Agency</option>
+            <option value="retail">Retail / E-commerce</option>
+            <option value="service">Service Business</option>
+            <option value="other">Other</option>
+        </select>
+    </div>
+    
+    <div class="text-left">
+        <label for="challenge" class="block text-primary font-semibold mb-2">Biggest Challenge</label>
+        <textarea id="challenge" name="challenge" rows="4" placeholder="Tell us what you're struggling with..." class="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:border-accent focus:outline-none text-slate-800 transition-colors"></textarea>
+    </div>
+    
+    <button type="submit" class="w-full bg-primary text-white px-8 py-4 rounded-lg font-semibold text-lg hover:-translate-y-1 hover:shadow-xl transition-all inline-flex items-center justify-center gap-2">
+        Get Your Free Automation Plan
+        <i data-lucide="send" class="w-5 h-5"></i>
+    </button>
+</form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-16 px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-accent">AutoFlow Systems</h3>
+                    <p class="text-slate-300 mb-6">Business automation solutions that actually work. From Barbados to the world.</p>
+                    <div class="flex gap-4">
+                        <a href="https://instagram.com" target="_blank" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent hover:-translate-y-1 transition-all">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent hover:-translate-y-1 transition-all">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-accent">Solutions</h3>
+                    <ul class="space-y-2 text-slate-300">
+                        <li><a href="#solutions" class="hover:text-accent transition-colors">Restaurant Systems</a></li>
+                        <li><a href="#solutions" class="hover:text-accent transition-colors">Message Ordering</a></li>
+                        <li><a href="#solutions" class="hover:text-accent transition-colors">Content Management</a></li>
+                        <li><a href="#solutions" class="hover:text-accent transition-colors">Kitchen Display</a></li>
+                        <li><a href="#solutions" class="hover:text-accent transition-colors">Custom Automation</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-accent">Company</h3>
+                    <ul class="space-y-2 text-slate-300">
+                        <li><a href="#how-it-works" class="hover:text-accent transition-colors">How It Works</a></li>
+                        <li><a href="#industries" class="hover:text-accent transition-colors">Industries</a></li>
+                        <li><a href="#pricing" class="hover:text-accent transition-colors">Pricing</a></li>
+                        <li><a href="#contact" class="hover:text-accent transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-accent">Contact</h3>
+                    <p class="text-slate-300 mb-2">Based in Barbados 🇧🇧</p>
+                    <p class="text-slate-300">Serving businesses worldwide</p>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 text-center text-slate-400">
+                <p>&copy; 2026 AutoFlow Systems. All rights reserved. Made in Barbados 🇧🇧</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lucide Icons Script -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Form submission will be connected later. Thank you for your interest!');
+        });
+
+        // Header shadow on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+                header.classList.add('shadow-sm');
+            }
+        });
+
+        // Mobile menu toggle (basic implementation)
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        mobileMenuBtn.addEventListener('click', function() {
+            alert('Mobile menu functionality can be enhanced based on your needs!');
+        });
+    </script>
+</body>
+</html>
